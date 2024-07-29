@@ -12,6 +12,7 @@ setup(
         author="Mahdi Musa Semnani, Mohammad Mahdi Nejati, Omidreza Nabavi",
         author_email="mahdi.2000musa@gmail.com, mmehdi2022@gmail.com, omidrezanabavi@gmail.com",
         url='https://github.com/mahdi2000musa/MM_JWT/',
+        package_dir='/mm_jwt/',
         description=DESCRIPTION,
         long_description=LONG_DESCRIPTION,
         packages=find_packages(),
