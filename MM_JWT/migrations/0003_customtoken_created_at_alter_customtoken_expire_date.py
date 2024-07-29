@@ -7,7 +7,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('tokens', '0002_alter_customtoken_expire_date_and_more'),
+        ('mm_jwt', '0002_alter_customtoken_expire_date_and_more'),
     ]
 
     operations = [

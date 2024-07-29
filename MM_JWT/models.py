@@ -56,7 +56,7 @@ class CustomToken(models.Model):
         token_user = token_data[0]
         
         try:
-            user = User.objects.get(id=token_user)
+            user = USER_MODEL.objects.get(id=token_user)
         except:
             return False
         
@@ -79,7 +79,7 @@ class CustomToken(models.Model):
     def get_user(self):
         user = self.__decode()
         try:
-            user = User.objects.get(id=user[0])
+            user = USER_MODEL.objects.get(id=user[0])
         except:
             raise Exception('user doesn\'t exist')
         return user

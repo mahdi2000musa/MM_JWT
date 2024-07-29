@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-VERSION = '0.0.6' 
+VERSION = '0.0.9' 
 DESCRIPTION = 'Django rest framework token authentication'
 LONG_DESCRIPTION = 'An open source project created by a group of three just in case you want custom tokens'
 
