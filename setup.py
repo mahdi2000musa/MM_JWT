@@ -1,16 +1,17 @@
 from setuptools import setup, find_packages
 
-VERSION = '0.0.1' 
+VERSION = '0.0.4' 
 DESCRIPTION = 'Django rest framework token authentication'
 LONG_DESCRIPTION = 'An open source project created by a group of three just in case you want custom tokens'
 
 # Setting up
 setup(
        # the name must match the folder name 'verysimplemodule'
-        name="MM-JWT", 
+        name="mm-jwt", 
         version=VERSION,
         author="Mahdi Musa Semnani, Mohammad Mahdi Nejati, Omidreza Nabavi",
         author_email="mahdi.2000musa@gmail.com, mmehdi2022@gmail.com, omidrezanabavi@gmail.com",
+        url='https://github.com/mahdi2000musa/MM_JWT/',
         description=DESCRIPTION,
         long_description=LONG_DESCRIPTION,
         packages=find_packages(),
