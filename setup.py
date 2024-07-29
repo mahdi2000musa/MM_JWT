@@ -7,7 +7,7 @@ LONG_DESCRIPTION = 'An open source project created by a group of three just in c
 # Setting up
 setup(
        # the name must match the folder name 'verysimplemodule'
-        name="mm-jwt", 
+        name="mm_jwt", 
         version=VERSION,
         author="Mahdi Musa Semnani, Mohammad Mahdi Nejati, Omidreza Nabavi",
         author_email="mahdi.2000musa@gmail.com, mmehdi2022@gmail.com, omidrezanabavi@gmail.com",
