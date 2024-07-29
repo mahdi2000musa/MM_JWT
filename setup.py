@@ -12,10 +12,12 @@ setup(
         author="Mahdi Musa Semnani, Mohammad Mahdi Nejati, Omidreza Nabavi",
         author_email="mahdi.2000musa@gmail.com, mmehdi2022@gmail.com, omidrezanabavi@gmail.com",
         url='https://github.com/mahdi2000musa/MM_JWT/',
-        package_dir='/mm_jwt/',
+        # package_dir={'': 'mm_jwt/'},
+        packages=['mm_jwt', 'mm_jwt/migrations'],
+        include_package_data=True,
         description=DESCRIPTION,
         long_description=LONG_DESCRIPTION,
-        packages=find_packages(),
+        # packages=find_packages(),
         install_requires=['pytz', 'djangorestframework', 'django'], # add any additional packages that 
 
         keywords=['django', 'rest framework', 'token', 'authentication'],
