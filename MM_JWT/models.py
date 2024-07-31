@@ -39,7 +39,7 @@ class CustomToken(models.Model):
 
 
     @classmethod
-    def __get_token(cls, request:HttpRequest):
+    def get_token(cls, request:HttpRequest):
         headers = request.headers
         return headers.get('Authorization')
 
@@ -48,7 +48,7 @@ class CustomToken(models.Model):
     def verify(cls, request): # TODO use this class method and give the request --> done.
         
         try:
-            token = cls.objects.get(value=cls.__get_token(request))
+            token = cls.objects.get(value=cls.get_token(request))
         except:
             return False
         
