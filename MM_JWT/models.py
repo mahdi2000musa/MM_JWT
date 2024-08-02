@@ -7,7 +7,7 @@ from django.contrib.auth import get_user_model
 
 USER_MODEL = get_user_model()
 
-# TODO use a function from utils to find and import settings.py
+
 
 class TokenManager(models.Manager): # TODO write appropriate manager for your token --> done.
     def create_token(self, user):
@@ -127,7 +127,8 @@ class CustomToken(models.Model):
         whenever save method is called, it will change expire date and after that the value
         of the token will be changed.
         """
-        self.expire_date = datetime.now().replace(tzinfo=pytz_UTC) + timedelta(minutes=30)
+        expire_time = settings.CUSTOM_TOKEN_CONF.get('token-life')
+        self.expire_date = datetime.now().replace(tzinfo=pytz_UTC) + timedelta(minutes=expire_time)
         self.value = ''
         self.value = self.__encode()
         return super().save(*args, **kwargs)
